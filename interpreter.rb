@@ -113,6 +113,7 @@ class Interpreter
         @jump_target = nil
         @iterate = 1
         @string_mode = false
+        @int_mode = false
 
         @stack = []
         @ico = Icosahedron.new
@@ -144,6 +145,11 @@ class Interpreter
                 if iter > 0 && cmd == :terminate
                     break
                 end
+
+                if cmd != :digit
+                    @int_mode = false
+                end
+
                 iter.times { process cmd, val }
             end
             
@@ -283,12 +289,13 @@ class Interpreter
         # Arithmetic
         when :push_zero
             push 0
+            @int_mode = true
         when :digit
-            val = pop
-            if val < 0
-                push(val*10 - cellVal-48) # 48 == '0'.ord
+            d = cellVal-48 # 48 == '0'.ord
+            if @int_mode
+                push(10*pop + d)
             else
-                push(val*10 + cellVal-48) # 48 == '0'.ord
+                push d
             end
         when :inc
             push(pop+1)

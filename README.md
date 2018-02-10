@@ -110,8 +110,8 @@ This section is a complete reference of all commands available in Wumpus, groupe
 
 ### Arithmetic
 
-- `#`: Pushes a **0** onto the stack.
-- `0-9`: Let's call the actual digit **d**. Pop **n**. If **n** is negative, push **10n - d**, otherwise push **10n + d**. This allows you to write decimal numbers in the source code despite each digit being processed separately.
+- `#`: Pushes a **0** onto the stack and activates the **int mode**. Int mode ends automatically when the IP enters a cell that doesn't contain a digit. While in int mode, large numbers can be written out digit by digit, instead of having to construct them from smaller numbers by arithmetic.
+- `0-9`: Let's call the actual digit **d**. If int mode is active (see `#`), pop **n**, push **10n + d** (this appends **d** to the current number on top of the stack). If int mode is not active, simply push **d**.
 - `(`: Decrement. Pop **n**. Push **n-1**.
 - `)`: Decrement. Pop **n**. Push **n+1**.
 - `!`: Logical NOT. Pop **n**. If **n = 0**, push **1**, otherwise push **0**.
