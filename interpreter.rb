@@ -98,6 +98,9 @@ class Interpreter
         @debug_level = debug_level
         @in_str = in_str
         @out_str = out_str
+        @out_str.binmode # Put the output stream in binary mode so that
+                         # we can write non-UTF-8 bytes.
+
         @max_ticks = max_ticks
 
         @grid = parse(src)
