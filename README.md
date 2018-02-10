@@ -113,7 +113,7 @@ This section is a complete reference of all commands available in Wumpus, groupe
 - `#`: Pushes a **0** onto the stack and activates **int mode**. Int mode ends automatically when the IP enters a cell that doesn't contain a digit. While in int mode, large numbers can be written out digit by digit, instead of having to construct them from smaller numbers by arithmetic.
 - `0-9`: Let's call the actual digit **d**. If int mode is active (see `#`), pop **n**, push **10n + d** (this appends **d** to the current number on top of the stack). If int mode is not active, simply push **d**.
 - `(`: Decrement. Pop **n**. Push **n-1**.
-- `)`: Decrement. Pop **n**. Push **n+1**.
+- `)`: Increment. Pop **n**. Push **n+1**.
 - `!`: Logical NOT. Pop **n**. If **n = 0**, push **1**, otherwise push **0**.
 - `'`: Negate. Pop **n**. Push **-n**.
 - `+`: Add. Pop **b**. Pop **a**. Push **a + b**.
