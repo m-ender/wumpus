@@ -42,6 +42,8 @@ Wumpus has a single **instruction pointer (IP)** which always moves parallel to 
 
 These reflections do not cause the current cell to be evaluated again. That means the bottom-left cell (coordinates (0, 3)) is only executed once in the above example. However, the cell at (1, 3) would be executed twice, because it's entered both before and after the bottom-left cell.
 
+Note that when the IP moves along a diagonal, its path in the source code actually has the shape of a staircase.
+
 It's possible to set the **strafing flag** with the `,` command. This causes the the IP to take the next step **orthogonally** to its current direction. Whether this movement goes left or right from the IP's perspective depends on the orientation of the current grid cell (because the IP can only ever move across edges). Here is an example of movement through a grid which contains three `,`s:
 
 [![Strafing][strafing]][strafing]
