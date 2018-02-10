@@ -160,6 +160,10 @@ Remember that the icosahedron should be pictured as resting on its active face, 
 - `Y`: **{5, 4, 14, 15, 6, 7, 8, 1, 2, 3, 12, 13, 20, 16, 17, 18, 9, 10, 11, 19}**: Tip onto southeastern corner, rotate by one face (72°) counterclockwise, then tip back.
 - `Z`: **{8, 1, 5, 6, 7, 17, 18, 9, 10, 2, 3, 4, 14, 15, 16, 20, 19, 11, 12, 13}**: Tip onto southwestern corner, rotate by one face (72°) counterclockwise, then tip back.
 
+Rotations `A`, `B`, `C`, `P`, `Q` and `R` are all rotations about an edge and and `X`, `Y`, `Z` are rotations about a corner. The following diagrams indicate which edge or corner they rotate about, assuming that the grey face is the active face. Remember that the net looks at the icosahedron *from below*, so east and west are swapped relative to the descriptions above.
+
+[![Net 1 rotations][net-1-rotations-unlabeled]][net-1-rotations-unlabeled] [![Net 2 rotations][net-2-rotations-unlabeled]][net-2-rotations-unlabeled]
+
 There are also a few non-fixed permutations:
 
 - `D`: "Roll the d20". This puts the icosahedron into a uniformly random orientation. I.e. each of the 20 faces is equally likely to become the active face and each of its three neighbours is equally likely to become the active face's southern neighbour. In practice, this is done by doing `X` 0-4 times, `W` 0-2 times, `P` 0-1 time and then `Q` 0-1 time (where each of those choices is independent and uniformly random).
@@ -171,6 +175,9 @@ Finally, there a few commands that let the icosahedron interact with the stack:
 - `S`: Store. Pop **n**, write **n** to the active face.
 - `L`: Load. Push the active face's value to the stack.
 - `F`: Push the active face's *index* to the stack (this lets you determine where the icosahedron ended up after a random rotation).
+
+  [net-1-rotations-unlabeled]: https://github.com/m-ender/wumpus/blob/master/img/net-1-rotations-unlabeled.png
+  [net-2-rotations-unlabeled]: https://github.com/m-ender/wumpus/blob/master/img/net-2-rotations-unlabeled.png
 
 ### Grid manipulation
 
