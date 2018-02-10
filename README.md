@@ -128,9 +128,9 @@ This section is a complete reference of all commands available in Wumpus, groupe
 
 ### I/O
 
-- `i`: Read a byte from the standard input stream and push it to the stack.
+- `i`: Read a byte from the standard input stream and push it to the stack. At EOF, push **-1** instead.
 - `o`: Pop **n**. Print the byte **n % 256** to the standard output stream.
-- `I`: Scan the standard input stream for the next decimal integer and push its value to the stack.
+- `I`: Scan the standard input stream for the next decimal integer and push its value to the stack. At EOF, push **0** instead.
 - `O`: Pop **n**. Print its decimal representation to the standard output stream.
 - `N`: Print a linefeed (0x0A) to the standard output stream.
 
