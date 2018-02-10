@@ -160,7 +160,7 @@ Remember that the icosahedron should be pictured as resting on its active face, 
 - `Y`: **{5, 4, 14, 15, 6, 7, 8, 1, 2, 3, 12, 13, 20, 16, 17, 18, 9, 10, 11, 19}**: Tip onto southeastern corner, rotate by one face (72°) counterclockwise, then tip back.
 - `Z`: **{8, 1, 5, 6, 7, 17, 18, 9, 10, 2, 3, 4, 14, 15, 16, 20, 19, 11, 12, 13}**: Tip onto southwestern corner, rotate by one face (72°) counterclockwise, then tip back.
 
-Rotations `A`, `B`, `C`, `P`, `Q` and `R` are all rotations about an edge and and `X`, `Y`, `Z` are rotations about a corner. The following diagrams indicate which edge or corner they rotate about, assuming that the grey face is the active face. Remember that the net looks at the icosahedron *from below*, so east and west are swapped relative to the descriptions above.
+Rotations `A`, `B`, `C`, `P`, `Q` and `R` are all rotations of an edge and and `X`, `Y`, `Z` are rotations about a corner. The following diagrams indicate which edge or corner they rotate about, assuming that the grey face is the active face. Remember that the net looks at the icosahedron *from below*, so east and west are swapped relative to the descriptions above.
 
 [![Net 1 rotations][net-1-rotations-unlabeled]][net-1-rotations-unlabeled] [![Net 2 rotations][net-2-rotations-unlabeled]][net-2-rotations-unlabeled]
 
