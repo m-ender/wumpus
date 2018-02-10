@@ -327,7 +327,7 @@ class Interpreter
             push(pop | pop)
         when :bit_xor
             push(pop ^ pop)
-        when :bit_bot
+        when :bit_not
             push(~pop)
 
         # Stack manipulation
