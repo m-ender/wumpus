@@ -30,7 +30,7 @@ These are just the normal (0-based) 2D coordinates you'd expect for the characte
 
 So **x**-coordinates still increase to the right and **y**-coordinates increase downward, but every other row is offset a bit, and horizontally there's only one vertex for every other cell.
 
-  [grid]: https://github.com/m-ender/wumpus/blob/master/img/source-layout.png
+  [grid]: https://github.com/m-ender/wumpus/blob/master/img/grid.png
   [cell-coordinates]: https://github.com/m-ender/wumpus/blob/master/img/cell-coordinates.png
   [vertex-coordinates]: https://github.com/m-ender/wumpus/blob/master/img/vertex-coordinates.png
 
