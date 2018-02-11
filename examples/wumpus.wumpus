@@ -1,0 +1,14 @@
+1SDL2vSD70L?.;;2.  < Setup; jumps to third line which starts the main loop
+
+3AL1a! ?,".supmuw a llems uoY"#19&oN03.          < This section checks the player's surroundings.
+        L2a!?,".ezeerb a leef uoY"#18&oN04.
+             AW(=12[?.;;7.
+
+    }&WC#11.                                     < This section reads the input. The top branch moves, the bottom branch shoots
+II5x^                                              and kills or moves the wumpus.
+     {FCFC[&WCL1a !?,"!supmuw eht dellik uoY"#22&oN@
+                    ".gnihtyna tih t'ndid worra ruoY"#31&oND#59 9L1a!?.;;L1xSUL1xSD=F-#82~9~?.;;;CCWC=F-#98~9~?.;;;#11.
+
+L1a!?,".uoy eta supmuw ehT"#19&oN@               < This section checks whether the player dies.
+     L2a!?,".tip eht otni llef uoY"#22&oN@         Otherwise, we return back to the third line.
+          2.
