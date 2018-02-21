@@ -186,7 +186,7 @@ class Interpreter
     private
 
     def parse(src)
-        lines = src.split($/)
+        lines = src.split($/, -1)
 
         grid = lines.map{|l| l.chars.map(&:ord)}
 
