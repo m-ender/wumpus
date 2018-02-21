@@ -192,7 +192,7 @@ class Interpreter
 
         width = grid.map(&:size).max
 
-        grid.each{|l| l.fill(0, l.length...width)}
+        grid.each{|l| l.fill(32, l.length...width)}
     end
 
     # Check whether a point is out of bounds
