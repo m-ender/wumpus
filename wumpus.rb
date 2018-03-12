@@ -4,7 +4,7 @@
 require_relative 'interpreter'
 
 if ARGV.size == 0
-    puts "Usage: ruby ico.rb [-dD] source.ico"
+    puts "Usage: ruby wumpus.rb [-dD] source.wumpus"
     exit
 end
 
@@ -23,12 +23,12 @@ end
 
 source = File.read(ARGV.shift)
 
-ico = Interpreter.new(source, debug_level)
+wumpus = Interpreter.new(source, debug_level)
 
 begin
-    ico.run
+    wumpus.run
 rescue => e
-    ico.print_debug_info
+    wumpus.print_debug_info
     $stderr.puts e.message
     $stderr.puts e.backtrace
 end
