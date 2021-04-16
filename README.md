@@ -20,7 +20,7 @@ And this is exactly how source files for Wumpus are interpreted. If not all line
 
 The grid actually stores signed arbitrary-precision integers, and will initially hold the code points of the characters in the source code.
 
-We will occasionally need to refer to individual cells or vertices between cells by their coordinates. Cells and vertices have separate coordinate systems. This the cell coordinate system:
+We will occasionally need to refer to individual cells or vertices between cells by their coordinates. Cells and vertices have separate coordinate systems. This is the cell coordinate system:
 
 [![Cell coordinates][cell-coordinates]][cell-coordinates]
 
@@ -67,7 +67,7 @@ The icosahedron is a collection of 20 registers, each of which has an index from
 
 If you can get your hands on a [Magic: the Gathering](https://en.wikipedia.org/wiki/Magic:_The_Gathering) spin-down die, it's strongly recommended to have it on your desk while trying to work with Wumpus's icosahedron, as they use the same face labelling.
 
-It's possible to rotate the icosehedron arbitrarily, but the relative positions of the faces will always remain the same. There's an **active face**, which is the register you can directly interact with – initially, this is face **1**. There's also an **orientation** to the icosahedron, which determines which neighbour of the active face rests where.
+It's possible to rotate the icosahedron arbitrarily, but the relative positions of the faces will always remain the same. There's an **active face**, which is the register you can directly interact with – initially, this is face **1**. There's also an **orientation** to the icosahedron, which determines which neighbour of the active face rests where.
 
 You should think of the icosahedron as resting on a table *on its active face*, such that the triangle points north. The initial orientation of the icosahedron is such that face **8** is south of the active face. Note that the two nets above are looking at the active face *from below*, which means east and west are flipped compared to the directions when looking down onto the icosahedron. For example, face **2** is initially the north**western** neighbour of the active face.
 
@@ -182,9 +182,9 @@ Finally, there a few commands that let the icosahedron interact with the stack:
 ### Grid manipulation
 
 - `g`: Get. Pop **y**. Pop **x**. Place the icosahedron onto cell **(x % w, y % h)**, where **w** and **h** are the grid's width and height, respectively. Activates *get mode*, where the current grid cell will be copied into the active face.
-- `s`: Set. Pop **y**. Pop **x**. Place the icosahedron onto cell **(x % w, y % h)**, where **w** and **h** are the grid's width and height, respectively. Activates *set mode*, where the current grid cell will be copied into the active face.
+- `s`: Set. Pop **y**. Pop **x**. Place the icosahedron onto cell **(x % w, y % h)**, where **w** and **h** are the grid's width and height, respectively. Activates *set mode*, where the active face will be copied into the current grid cell.
 - `e`: End. Removes the icosahedron from grid, ending either *get* or *set mode*.
-- `<`, `>`, `b`, `d`, `p`, `q`: Move icosahedron. These tip the icosahedron onto the grid cell west, east, northwest, northeast, southwest or southeast, respectively, of the current cell. These directions should be treated the same as IP directions, so for any given cell these only point at three different cells. If this movement would make the icosehedron go out of the grid's bounds, the command is ignored. Note that tipping the icosahedron also changes the active face, so that this movement is accompanied by an implicit rotation via one of `A`, `B`, `C`. Which rotation happens depends on whether the current cell points upward or downward. The following table lists the implicit permutation for every possible configuration:
+- `<`, `>`, `b`, `d`, `p`, `q`: Move icosahedron. These tip the icosahedron onto the grid cell west, east, northwest, northeast, southwest or southeast, respectively, of the current cell. These directions should be treated the same as IP directions, so for any given cell these only point at three different cells. If this movement would make the icosahedron go out of the grid's bounds, the command is ignored. Note that tipping the icosahedron also changes the active face, so that this movement is accompanied by an implicit rotation via one of `A`, `B`, `C`. Which rotation happens depends on whether the current cell points upward or downward. The following table lists the implicit permutation for every possible configuration:
 
            cmd   <  >  b  d  p  q
                                  
